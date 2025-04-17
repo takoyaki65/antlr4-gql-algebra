@@ -26,6 +26,12 @@
 ```bash
 $ python3 main.py samples/gcloud/example1.gql 
 file: samples/gcloud/example1.gql
+query:
+MATCH (p:Person)-[o:Owns]->(a:Account)-[o2:Owns]->(c:CreditCard)
+FILTER p.birthday < '1990-01-10' AND p.name = 'John'
+RETURN p.name
+
+extraction result:
 
 PROJECTION: ["p.birthday<'1990-01-10'ANDp.name='John'"]
 FILTER CONDITIONS: RETURNp.name

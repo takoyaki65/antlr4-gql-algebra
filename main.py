@@ -13,6 +13,9 @@ def main():
     
     with open(args.file, "r") as f:
         text = f.read()
+        
+    print("query:")
+    print(text)
     
     input_stream = InputStream(text)
     lexer = GQLLexer(input_stream)
@@ -26,6 +29,7 @@ def main():
 
     query_tree = listener.returnQueryTree()
     
+    print("extraction result:")
     print(query_tree)
 
 if __name__ == "__main__":
