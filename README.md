@@ -22,6 +22,18 @@
    .../anglr4-gql-alegbra$ . .venv/bin/activate
    ```
 
+# 実行例
+```bash
+$ python3 main.py samples/gcloud/example1.gql 
+file: samples/gcloud/example1.gql
+
+PROJECTION: ["p.birthday<'1990-01-10'ANDp.name='John'"]
+FILTER CONDITIONS: RETURNp.name
+TRIPLE PATTERNS:
+Triple(Node((p:Person)) Edge(--[-[o:Owns]->]--) Node((a:Account)))
+Triple(Node((a:Account)) Edge(--[-[o2:Owns]->]--) Node((c:CreditCard)))
+```
+
 # ファイル構成
 * `grammar/GQL.g4`: GQL grammar of ANTLR4 from https://github.com/opengql/grammar
 * `grammar/[GQLParser.py|GQLLexer.py]`: ANTLR4で自動生成されたパーサ。以下のコマンドで`GQL.g4`から自動生成できる。
