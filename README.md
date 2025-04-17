@@ -31,3 +31,10 @@ antlr4 -Dlanguage=Python3 GQL.g4
 * `grammar/GQLListener.py`: 抽象構文木(AST)を走査して処理するリスナーパターンのテンプレートクラスが定義されている。このクラスを継承して、ASTを走査し、代数データ構造なりASTなりを得るロジックを作成する。
 
 * `ExtendedGQLListener.py`: `GQLListener`クラスを継承し、クエリのセマンティックを抽出した代数データ構造を返すロジックを実装(現在進行中)
+
+# ANTLR文法のパース結果の可視化方法
+1. [ANTLR4 grammar syntax support](https://marketplace.cursorapi.com/items?itemName=mike-lischke.vscode-antlr4)という拡張機能をインストールする。
+1. `sample/`フォルダから、適当なGQLクエリを選択し、vscode内でフォーカスを当てる。
+![Debug ANTLRボタン](fig/debug-antlr-button.png)
+1. 左サイドバーの`debug`バーを開き、``Debug ANTLR`の左側の再生ボタンを押す。すると、パース結果がグラフとして見ることができる。
+![可視化結果](fig/visualize-result.png)
