@@ -14,12 +14,12 @@
 
    venvを作成する．
    ```bash
-   .../dsa-back$ uv sync
+   .../antlr4-gql-algebra$ uv sync
    ```
 
    venvをactivateする
    ```bash
-   .../dsa-back$ . .venv/bin/activate
+   .../anglr4-gql-alegbra$ . .venv/bin/activate
    ```
 
 # ファイル構成
